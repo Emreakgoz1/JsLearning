@@ -426,6 +426,28 @@
         isimler3["soyadı"] = "Akgoz";
         isimler3["AnneAdı"] = "Leyla";
         console.log(isimler3);*/
+        
+        //Çok Boyutlu Diziler (içiçe)
+        var bilgiler = [];
+        bilgiler[0] = ["Emre","Akgoz"];
+        bilgiler[1] = ["leyla","kkk"];
+        document.write(bilgiler[0][1]);
+        document.write(bilgiler[1][0]);
+
+        //Dizi elemanlarını Tek Seferde Yazdırma (Join)
+        var liste = ["Elma","Armut","Portakal"];
+        console.log(liste.join());
+
+        //Dizileri Birleştirme
+        //2 diziyi birbirleri ile birleştirmeye yarıyor
+        var liste = ["Elma","Armut","Portakal"];
+        var sebze  =["Maydanoz","Lahana"];
+        var birlestir = liste.concat(sebze);
+        console.log(birlestir);
+        //Değişkene atamadan yazdırdım.
+        var isimler = ["emre","akgoz","enes"];
+        var meslek = ["yazilim","grafik","müdür"];
+        console.log(isimler.concat(meslek));
     </script>
 
     
