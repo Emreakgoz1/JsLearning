@@ -36,7 +36,7 @@
         document.write("Emre ile js öğreniyorum");
     </script>
     <script>
-        alert("Emre alerti");
+      //  alert("Emre alerti");
     </script>
     <script>
         //Browser içerisinde incele deki consoledan değerleri görebilirsin
@@ -51,22 +51,22 @@
         var isiM = "Emree", soyisim = "Akgoz", yil = 2023;
         document.getElementById("ornek2").innerHTML = sehir;
         document.write(isim);
-        alert(yil);
+     //   alert(yil);
         console.log(isiM);
 
     </script>
 
     <script>
         //var kullanımı
-        if(true)
+      /*  if(true)
         {
             var x = 10;
         }
-        document.write(x);
+        document.write(x);*/
     </script>
     <script>
         //let kyullanımı
-        let x = 10;
+     /*  let x = 10;
         if(true)
         {
             let x = 20;
@@ -74,11 +74,11 @@
         }
         //x değeri sayfa genelinde 10
         //ancak if içerisinde 20
-        document.write(x);
+        document.write(x);*/
     </script>
      <script>
         //let kyullanımı
-        const x = 10;
+    /*    const x = 10;
         if(true)
         {
             const x = 20;
@@ -87,7 +87,183 @@
         }
         //x değeri sayfa genelinde 10
         //ancak if içerisinde 20
-        document.write(x);
+        document.write(x);*/
+    </script>
+    <script>
+        //Aritmatik Operatörler
+      /*  var sayi1 = 1;
+        var sayi2 = 5;
+        document.write(sayi1+sayi2);
+        document.write(sayi1-sayi2);
+        document.write(sayi1*sayi2);
+        document.write(sayi1/sayi2);
+        document.write(sayi1%sayi2);*/
+    </script>
+    <script>
+        //atama operatorleri
+       /* var sayi1 = 10;
+        var sayi2 = 4;
+        var sayı3;
+        sayi3 = sayi2;
+        sayi1+=sayi2; //ekle ve ata
+        sayi1-=sayi2; //çıkar ve ata;
+        sayi1*=sayi2; //çarp ve ata
+        sayi1/=sayi2; //böl ve ata
+        sayi1%=sayi2; //kalanını bul ve ata*/
+
+    </script>
+    <script>
+        //Karşılaştırma operatorleri
+       /* var sayi1 = 10;
+        var sayi2 = 4;
+        document.write(sayi1==sayi2);  //eşit olmadıgı için false geldi
+        document.write(sayi1===sayi2); //tipleri kontrol ediyor true doner
+        document.write(sayi1!=sayi2) //sayi 1 sayı 2 eşit degildir. true doner
+        document.write(sayi1!==sayi2) //denk degildir kontrolü
+        document.write(sayi1>sayi2);
+        document.write(sayi1<sayi2);
+        document.write(sayi1>=sayi2);
+        document.write(sayi1<=sayi2);*/
+    </script>
+    <script>
+      /*  var sayi1 = false;
+        var sayi2 = true;
+        document.write(sayi1 && sayi2); //Burda dedim ki 2 degerinde aynı olmasını bekliyorum
+        document.write(sayi1||sayi2); //ikisinnden biri trueysa true dondor
+        document.write(!sayi1); //false oldugu ıcın true;*/
+    </script>
+    <script>
+        //Birleştirme operatoru
+      /*  var isim = "Emre";
+        var soyisim = "Akgoz";
+        document.write(isim +" "+soyisim);
+        document.write(isim+=soyisim);//Cok dogru bir kullanıl degil*/
+    </script>
+    <script>
+        //Operator işlem onceliği
+        //Matematiksel oncelik js de de vardır
+        var sonuc = 10 + 5 * 3 ;
+        var sonuc2 = (10 + 5) * 3; //oncelik icin parantez kullan.
+        document.write(sonuc);
+    </script>
+    <script>
+        //Diyalog Kutuları
+        //alert("Emre akgoz-js ogrenir cok güsel");
+
+
+       // var soru = prompt("İsminiz Nedir");
+        // alert('İsmi: ' + soru);
+        
+
+      /*  var soru = confirm("İşleme Devam edilsin mi?")
+        if(soru)
+        {
+            console.log("Evet dedi");
+        }
+        else
+        {
+            console.log("İptal dedi");
+        }*/
+    </script>
+    <script>
+        //Veri Türleri
+        //var ile tanımladıgında tiplerini js kendisi alır.
+
+        //Array Tanımlama
+       // var degisken1  = new Array("Emre","Akgoz",35,false);
+       // var degisken2 = ["emre","akgoz",35,false];
+        //
+
+        //Object Tanımlama
+     /*   var adres = {
+            sehir : 'İzmir',
+            ulke : 'Turkiye',
+            plaka : 35
+        }
+        console.log(adres.sehir);
+        */
+        //Bu şekşilde nesnelere ulasabiliyoruz.
+
+        //Tanımsız boş veri türü
+        //var ankara; //undefined veri türü
+       // console.log(ankara);
+        //
+       // var ankara = ""; //boş veri türü null
+       // console.log(ankara);
+
+
+      /* var isim = "Emre";
+       var plaka = 06;
+       var bilgiler = ["Ankara",06];
+       var diger = {
+        il : "Ankara",
+        ilce : "Mamak"
+       }
+       var yok;
+       var kontrol = false;
+       console.log(typeof kontrol);*/
+       //Degişkenın veri türünü ogrenebilmek için typeof ile degişken ismini yazarak kontrol edebilirsin.
+    </script>
+    <script>
+        //Koşul İfadeleri
+     /*  if(koşul)
+        {
+
+            //calıstıralacak kodlar yazılır.
+        }
+
+        var isim = "ibrahim";
+        if(isim=="ibrahim")
+        {
+            console.log("isim değişkeni degeri ibrahim'dir");
+        }
+        else if(isim == "emre")
+        {
+            console.log("isim değişkeni degeri Emredir");
+        }
+        else
+        {
+            console.log("isim emre veya ibrahim degildir");
+        }
+
+        let sayi = 49;
+        if(sayi<18)
+        {
+            console.log("18 Yaşından Küçük");
+        }
+        else if(sayi>=18 && yas<40)
+        {
+            document.write("18 ve 39 yaş arasındasın");
+        }
+        else if(sayi >=40 && sayi <=60 )
+        {
+            console.log("40-59 yaş arasındasin");
+        }
+        else
+        {
+            console.log("60'dan büyüksün")
+        }
+
+
+        isim = "ibrahim" ? console.log("evet") : console.log("hayır"); // degişken + koşul ? doğru ise : yanlış ise */
+
+
+        /*var tarih = new Date();
+        var gun = tarih.getDay();
+        switch(gun)
+        {
+            case 0:
+            console.log("pazar");
+            break;
+            case 1 : 
+            console.log("pazartesi");
+            break;
+            case 2: 
+            console.log("salı");
+            break;
+        }
+*/
+
     </script>
 
     
