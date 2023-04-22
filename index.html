@@ -13,20 +13,83 @@
     </script>
 </head>
 <body>
-
-    <div id="ornek"></div>
-    <script>
-        document.getElementById("ornek").innerHTML = "Merhabalar efenim";
-    </script>
-    <noscript>
-        Javascript kodları çalışmıyor.Lütfen Aktif Edin!
-    </noscript>
-    <script>
-      //Dahili js kodları böyle yazılır.script taglari içerisnde
-    </script>
+    
     <script src="kodlar.js">
          //Harici js kodlar source ile dahil ediliyor
     </script>
+     <noscript>
+        Javascript kodları çalışmıyor.Lütfen Aktif Edin!
+    </noscript>
+
+    <div id="ornek"></div>
+    <script>
+        //div id sinden div içerisine ulaşıp innerhtml ile istedigimiz eşyi yazdırabiliriz.
+        document.getElementById("ornek").innerHTML = "Merhabalar efenim";
+    </script>
+   
+    <script>
+      //Dahili js kodları böyle yazılır.script taglari içerisnde
+    </script>
+    
+    <script>
+        //Yazmış oldugumuz dosyanın hızlı bir şekilde resultunu görmek için document write kullanırızç.
+        document.write("Emre ile js öğreniyorum");
+    </script>
+    <script>
+        alert("Emre alerti");
+    </script>
+    <script>
+        //Browser içerisinde incele deki consoledan değerleri görebilirsin
+        console.log("Emre ile console log maceralari");
+    </script>
+    <div id="ornek2"></div>
+    <script>
+        //js tarafında degişken tanımlama ve yazdırma
+        var isim = "Emre";
+        var sehir = "Ankara";
+        var puan = 10;
+        var isiM = "Emree", soyisim = "Akgoz", yil = 2023;
+        document.getElementById("ornek2").innerHTML = sehir;
+        document.write(isim);
+        alert(yil);
+        console.log(isiM);
+
+    </script>
+
+    <script>
+        //var kullanımı
+        if(true)
+        {
+            var x = 10;
+        }
+        document.write(x);
+    </script>
+    <script>
+        //let kyullanımı
+        let x = 10;
+        if(true)
+        {
+            let x = 20;
+            //document.write sınırlar içerisnde olsaydı x 20 basılacaktı ekrana
+        }
+        //x değeri sayfa genelinde 10
+        //ancak if içerisinde 20
+        document.write(x);
+    </script>
+     <script>
+        //let kyullanımı
+        const x = 10;
+        if(true)
+        {
+            const x = 20;
+            //document.write sınırlar içerisnde olsaydı x 20 basılacaktı ekrana
+
+        }
+        //x değeri sayfa genelinde 10
+        //ancak if içerisinde 20
+        document.write(x);
+    </script>
+
     
 </body>
 </html>
