@@ -425,7 +425,7 @@
         isimler3["adı"] = "Emre";
         isimler3["soyadı"] = "Akgoz";
         isimler3["AnneAdı"] = "Leyla";
-        console.log(isimler3);*/
+        console.log(isimler3);
         
         //Çok Boyutlu Diziler (içiçe)
         var bilgiler = [];
@@ -448,6 +448,174 @@
         var isimler = ["emre","akgoz","enes"];
         var meslek = ["yazilim","grafik","müdür"];
         console.log(isimler.concat(meslek));
+
+        //Diziye Eleman Ekleme
+        //Dizinin sonuna veri eklemesi yaptım
+        var liste = ["Elma","Armut","Portakal"];
+        liste.push("Erik");
+        console.log(liste);
+
+        //Dizinin Son elemanını silme
+        var liste = ["Elma","Armut","Portakal"];
+        liste.pop();
+        console.log(liste);
+        //Dizinin ilk elemanını silme
+
+        var liste = ["Elma","Armut","Portakal"];
+        liste.shift();
+        console.log(liste);
+
+        //Dizinin başına ekleme yapma
+        var liste = ["Elma","Armut","Portakal"];
+        liste.unshift("Erik");
+        console.log(liste);
+
+        //Dizinin belirlenen indisine ekleme yapma
+        var liste = ["Elma","Armut","Portakal"];
+        var ekle = isimler.splice(1,0,"Erik");
+        //1 den sonraki parametre silmemizi istedigiimiz verinin sayısını belirtebiliyoruz.
+        //1 yazdıgımda 1. indise atıyor
+        console.log(liste);
+
+        //Dizide belirlenen verileri alma
+        var isimler = ["emre","akgoz","enes","ahmet"];
+        var yeni = isimler.slice(1,3);
+        //1.veri dahil 3.hariç seklinde alıyor
+        //Yani  yukarda akgozu ve enesi alacak 3.indisi almayacak
+        console.log(yeni);
+
+        //diziyi tersine çevirme
+        var isimler = ["emre","akgoz","enes","ahmet"];
+        var yeni = isimler.reverse();
+        console.log(yeni);
+
+        //dizilerde sıralama yapma
+        var isimler = ["emre","akgoz","enes","ahmet"];
+        //stringe calısıyor ancak int larda fonksiyonla yapmak lazım
+        //Türkçe ifadelerde patlayabiliyor
+        //localcompare de onu çözüyor.
+        var sayılar = [50,6,75,12];
+        var yeni = sayılar.sort(function(a,b){return b-a});
+        var yeni2 = isimler.sort(function(a,b){return a.localeCompare(b)});
+        //b-a dedigimizde büyükten küçüğe
+        //a-b dedigimizde küöçükten büyüğe
+        console.log(yeni);
+        console.log(yeni2);
+        console.log(isimler.sort());
+
+        //Dizi mi kontrolünü yapma
+        var isimler = ["emre","akgoz","enes","ahmet"];
+        var isim = "emre akgoz";
+        console.log(Array.isArray(isimler));
+        if(!Array.isArray(isim))
+        {
+            document.write("Bu bir dizi degil!");
+        }
+        else{
+            document.write("Bu bir dizi");
+        }
+
+        //Sayı mı kontrolü yapma
+        var veri = "javascript";
+        if(isNaN(veri))
+        {
+            console.log("Sayı degil");
+        }
+        else
+        {
+            console.log("Sayı");
+        }
+
+        //Dizi değerlerini almak foreach
+        var sayilar = [1,2,3,4,5];
+        var toplam = 0;
+        sayilar.forEach(function(sayi){
+            toplam +=sayi;
+        })
+        console.log(toplam);
+       
+        //Dizilerde filtreleme yapma
+        //döngü kullanmadan kontrol filrtleme işlemi yaptık.
+        var sayilar = [1,2,3,4,5,6,7,8,9,0];
+        var kontrol = sayilar.filter(sayi=>{
+            return sayi>6;
+        });
+        console.log(kontrol);
+        
+        const ogrenciler = [
+            {isim:"Emre",sinif:true},
+            {isim:"ceylin",sinif:false},
+            {isim:"Enes",sinif:true},
+            {isim:"ilkcan",sinif:false},
+            {isim:"furkan",sinif:false},
+            {isim:"Ege",sinif:true},
+            {isim:"buse",sinif:false},
+        ];
+        const gecenler = ogrenciler.filter(ogrenci=>{
+            return ogrenci.sinif;
+            //return ogrenci.sinif yazdıgımızda sadece true değerleri bize verecektir.
+            //not almıs olsaydık su sekilde yazacaktık
+            // return ogrenc.sinif>45 olan deseydik aynı sonucu üretmiş olacaktık
+        })
+        console.log(gecenler);
+        
+        //Dizide değişiklik yaparak yeni dizi olusturma
+        const sayilar2 = [10,20,30,40,50,60,70];
+        const kontrol2 = sayilar2.map(sayi=>{
+            return sayi + 20;
+            //dizi içerisindeki her bir veriyi sayi değişkeni olarak aldık
+            //ve bütün verilerile +20 ekledik
+            //ve yeni bir dizi olsuturmus olduk
+        })
+        console.log(kontrol2);
+        
+        const ogrenciler= [
+        {isim:"Emre" ,puan:40},
+        {isim:"ceylin", puan:60},
+        {isim:"Enes", puan:30},
+        {isim:"ilkcan", puan:100},
+        {isim:"furkan", puan:50}, 
+        {isim:"Ege", puan:20},
+        {isim:"buse", puan:36}
+        ];
+        const gecenler = ogrenciler.map(ogr=>{
+            if(ogr.puan<70){
+                return {isim: ogr.isim,puan : ogr.puan + 15}
+            }
+            else
+            {
+                return ogr;
+            }
+        })
+        console.log(gecenler);
+        //Burada yaptıgımız şey ney biliyormusun
+        //Tam olarak ogrenciler constunu dizisinkdeki elemanları map ile alıyoruz
+        //Sonra bunu bir değişkene atayıp ogr olarak çekiyoruz
+        //ogr içerisinde puanı 70 den düşük olanların isimlerini getir ve puanlarına 15 ekle diyoruz
+        //70den cok almışşa direk ogrenticiyi döndür diyoruz
+        
+
+        //Dizinin her değeri için işlem yapma(Reduce)
+
+        var rakam = [1,2,3,4,5,6,7,8,9,0];
+        var say = 0;
+        var kontrol = rakam.reduce((deger,r)=>{
+            //rakam dizimi seçtim reduce tanımladım
+            //2 değer giricem 1.değer(değer)2.rakamlar yani r sonunada 0 degeri girdim başlangıç degeri oldugu için
+            if(r>7){
+                say++;
+            }
+            return say;
+        },0);
+        console.log(kontrol);*/
+
+        //dizide aranan ilk değeri bulma(find)
+        const sayilar = [10,20,30,40,50,60,70,80];
+        const kontrol = sayilar.find(sayi=>{
+                return sayi >50;
+        })
+        console.log(kontrol);
+        //50 den sonra true donen ilk değeri bulur ve sadece onu döndürür
     </script>
 
     
