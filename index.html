@@ -20,42 +20,38 @@
      <noscript>
         Javascript kodları çalışmıyor.Lütfen Aktif Edin!
     </noscript>
-
     <div id="ornek"></div>
     <script>
         //div id sinden div içerisine ulaşıp innerhtml ile istedigimiz eşyi yazdırabiliriz.
-        document.getElementById("ornek").innerHTML = "Merhabalar efenim";
+       // document.getElementById("ornek").innerHTML = "Merhabalar efenim";
     </script>
-   
     <script>
       //Dahili js kodları böyle yazılır.script taglari içerisnde
     </script>
-    
     <script>
         //Yazmış oldugumuz dosyanın hızlı bir şekilde resultunu görmek için document write kullanırızç.
-        document.write("Emre ile js öğreniyorum");
+     //   document.write("Emre ile js öğreniyorum");
     </script>
     <script>
       //  alert("Emre alerti");
     </script>
     <script>
         //Browser içerisinde incele deki consoledan değerleri görebilirsin
-        console.log("Emre ile console log maceralari");
+       // console.log("Emre ile console log maceralari");
     </script>
     <div id="ornek2"></div>
     <script>
         //js tarafında degişken tanımlama ve yazdırma
-        var isim = "Emre";
-        var sehir = "Ankara";
-        var puan = 10;
-        var isiM = "Emree", soyisim = "Akgoz", yil = 2023;
-        document.getElementById("ornek2").innerHTML = sehir;
-        document.write(isim);
+       // var isim = "Emre";
+       // var sehir = "Ankara";
+       // var puan = 10;
+       // var isiM = "Emree", soyisim = "Akgoz", yil = 2023;
+       // document.getElementById("ornek2").innerHTML = sehir;
+       // document.write(isim);
      //   alert(yil);
-        console.log(isiM);
+      //  console.log(isiM);
 
     </script>
-
     <script>
         //var kullanımı
       /*  if(true)
@@ -142,9 +138,9 @@
     <script>
         //Operator işlem onceliği
         //Matematiksel oncelik js de de vardır
-        var sonuc = 10 + 5 * 3 ;
-        var sonuc2 = (10 + 5) * 3; //oncelik icin parantez kullan.
-        document.write(sonuc);
+       // var sonuc = 10 + 5 * 3 ;
+       // var sonuc2 = (10 + 5) * 3; //oncelik icin parantez kullan.
+       // document.write(sonuc);
     </script>
     <script>
         //Diyalog Kutuları
@@ -333,12 +329,9 @@
     }
     */
     </script>
-
-
-    <button onclick="yaz('Emre Akgoz','Ankara')">Tıklat-Emre Akgoz</button>
+   <!-- <button onclick="yaz('Emre Akgoz','Ankara')">Tıklat-Emre Akgoz</button>
     <button onclick="yaz('Leyla Akgoz','izmir')">Tıklat-Leyla Akgoz</button>
-    <button onclick="islem(100,200)">Topla</button>
-
+    <button onclick="islem(100,200)">Topla</button>-->
     <script>
         //Fonksiyonlar
       /*  function isim()
@@ -616,6 +609,81 @@
         })
         console.log(kontrol);
         //50 den sonra true donen ilk değeri bulur ve sadece onu döndürür
+    </script>
+    <script>
+        //String Nesnes
+
+        //To string bir diziyi stringe çevirdik virgüllerle ayrılmış oldu
+        var isimler = ["emre","akgoz","enes","ahmet"];
+        console.log(isimler.toString());
+
+        //Eleman Sayısını Bulma
+        var metin = "Merhaba,Javascript Derslerine Hoş geldiniz.";
+        document.writeln(metin.length);
+        //String ifadeler kaç karakter bulundugunu döndürür
+        var isimler= ["ibrahim","emre","enes"];
+        //Dizilerde kaç elemanım oldugunu döndürür.
+        document.writeln(isimler.length);
+
+        //Baştan sonra Arama Yapma (indexOf)
+        //Dizinin index değerini verir
+        //String ifadenin kaçıncı karakterde oldugunu gösterir
+        var isim = ["ibo","emre","ceylin","enes"];
+        var metin = "Merhaba,Javascript Dersleri";
+        document.write(isim.indexOf("emre"));
+        document.write(metin.indexOf("Javascript"));
+
+        //Sonda Başa Aarama yapma
+        //Buldugu ifadenin sonuncusunu alır en son ulasabildigi hedefe kadar igtti ve onu aldı
+        var isim = ["ibo","emre","ceylin","enes","emre"];
+        var metin = "Merhaba,Javascript Dersleri Javascript";
+        document.write(isim.lastIndexOf("emre"));
+        document.write(metin.lastIndexOf("Javascript"));
+
+        //String Değerleri Diziye Çevirme
+        //Bir verimiz vardır - ifadeleriyle birlleştiriyoruzdur onu diziye çevirebiliriz
+        var metin = "Merhaba,javascript Eğitimi görüyorum ben çok iyi.";
+        var bol = metin.split(" ");
+        console.log(bol);
+        var metin2 = "09:05:00";
+        var bol2 = metin2.split(":");
+        console.log(bol2);
+
+        //Tüm harfleri küçük harfe çevirme
+        //Sadece string ifadeleri için.
+        var metin = "Merhaba,javascript Eğitimi görüyorum ben çok iyi.";
+        var cevir = metin.toLowerCase();
+        document.write(cevir);
+
+        //Tüm harfleri büyük harfe çevirme
+        var metin = "Merhaba,javascript Eğitimi görüyorum ben çok iyi.";
+        var cevir = metin.toLocaleUpperCase();
+        document.write(cevir);
+
+        //Yazı değerlerinde kırpma/bölme (substring)
+        var metin = "Merhaba,javascript Eğitimi görüyorum ben çok iyi.";
+        var cevir = metin.substring(2,26); //2.parametre boş bırakılırsa sonuna kadar alıcaktı
+        document.write(cevir); //verilen 2 değer arasında kesme işlemi yapıyor.
+
+        //String ifadelerini birleştirme (concat)
+        var metin = "Merhaba,javascript Eğitimi";
+        var imza = "Emre Akgoz";
+        var duzenle = metin.concat("-" + imza);
+        document.write(duzenle);
+
+        //Belirlenen Değeri Yenisiyle Değiştirme (replace)
+        //regex kullandıgımız için bütün emreleri emrecik olarak değiştirdi
+        var metin = "Merhaba,emre Akgoz,inadeına emre";
+        document.write(metin.replace(/emre/g,"Emrecik"));
+
+        //String gelen ifadeyi çevirme sayısal olarak
+        var bilgi = "35+5";
+        console.log(bilgi);
+        console.log(eval(bilgi));
+        //stringi numbera çevirip sonuc olarak 40 değeri verdi bizde
+
+
+
     </script>
 
     
