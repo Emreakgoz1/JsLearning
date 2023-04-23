@@ -763,7 +763,100 @@
         tarih.setFullYear(2024);
         document.write(tarih);*/
     </script>
+    <div id="isim">emre akgoz</div>
+    <div id="il">Ankara</div>
+    <div class="classisim">Emre</div>
+    <span>Bu bir spandır.</span>
+    <a href="https://google.com" class="a">Google</a>
+    <div id="nesne"> </div>
+    <div id="silmek1">Silinecek veri</div>
+    <div id="silmek2">Silinecek veri2</div>
+    <div id="cssdenemesi">emre ile css denemsi </div>
+    <ul id="liste">
+        <li>ibrahim</li>
+        <li>emre</li>
+        <li>fevzi</li>
+    </ul>
 
+    <script>
+        //Dom Nedir (Document Object Model)
+        //id üzerinden erişim sağlama
+        /*var isim = document.getElementById("isim").innerText; //innerText ile alırsak paragtaf b taglerini devre dışı bırakıp alır
+        var il = document.getElementById("il").innerHTML;
+        //alacagımız divin içerisinde html tagları de alıcaksak ınnerHtml olacak;
+        var il2 = document.getElementById("il").innerText = "izmir";
+        //şeklinde ben manipüle işlemi yapabiliyorum.
+        console.log(isim);
+        console.log(il);
+
+        //class Elemanın Göre Erişim Sağlama
+        var div = document.getElementsByClassName("classisim");
+        //bu şekilde div class ilk div olanı seçip içerisini manipule edebiliyorum.
+       // div[0].innerText = "akgoz";
+       // div[0].innerHTML = "<b>akgoz</b>";
+        console.log(div);
+        //Bu şekilde veriyi çekebilirim ama sıra b elirtmem gerekiyor.
+        console.log(div[0].innerHTML);
+
+        //Etiketlere Göre Erişim Sağlama
+        var tagdiv = document.getElementsByTagName("span");
+        tagdiv[0].innerHTML="Merhaba";
+        //Yukarda tanımlanmıs olan spanın içerisindeki değeri değiştirmiş oldumö.
+       // var tagdiv = document.getElementsByTagName("span").innerHTML;
+        //Kesinlikle sıra belirtmemiz gerekiyor
+        //innerhtml yaparak verilere ulaşabiliyorsunuz.
+        console.log(tagdiv[0].innerHTML);
+
+        //Elemanların Niteliğini Değiştirme (setAttribute)
+        var a = document.getElementsByTagName("a");
+        a[0].setAttribute("href","https://ibrahimcevruk.com"); 
+        //Ben bu a elementinin href özelliginin içindeki değişkeni değiştiriyorum dedim.
+        a[0].innerText="İbrahim Çevruk";
+        //Hemde textini değiştirdim.
+        console.log(a);
+
+
+        //Yeni eleman Oluşturma
+        var bolum  = document.createElement("div");//Hangi elementi olusturucaksam onu yazıyorum
+        bolum.innerHTML = "Bu div js ile olusturulmustur";
+        document.body.appendChild(bolum);
+        //document.body derken b urada bunu nereye yazmak istiyorsak onun ismini veriyoruz.
+        document.getElementById("nesne").appendChild(bolum);
+
+        //Eleman Silme işlemi (removeChild)
+        var sil = document.getElementById("silmek1");
+        sil.parentNode.removeChild(sil);
+
+        //listeden element silme
+        var liste = document.getElementById("liste");
+        console.log(liste.removeChild(liste.childNodes[1]));
+        //li ler aslında 2şer 2şer sayıldıgı için
+        //Silme işlemi yapacaksak eğer 1 3 5 değerlerini vermemiz lazım
+        //liste.removeChild(liste.childNodes[5]);
+
+        //eleman değiştirme (replacechild)
+        var yeni = document.createTextNode("ENES");
+        var sira = document.getElementById("liste").childNodes[3];
+        sira.replaceChild(yeni,sira.childNodes[0]);
+
+        //Css özelliği atama
+        var div = document.getElementById("cssdenemesi");
+        div.style["color"] = "red";
+        div.style["fontSize"] = "20px";
+        div.style["padding"] = "20px";*/
+
+        //Tüm elemenlara Erişim sağlama (querySelector)
+        //tag ile id etiket ile ulaşabiliriz ama queryselector bunların hepsine ulaşabilir.
+        var div = document.querySelector("div");
+        //divi böyle alıyoruz.
+        var div2 = document.querySelector(".classisim");
+        //classi . ile alıyoruz
+        var div3 = document.querySelector("#liste");
+        //listeyi de # ile alıyoruz.
+        
+
+
+     </script>
     
 </body>
 </html>
