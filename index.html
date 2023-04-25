@@ -1197,5 +1197,162 @@
 
                 localStorage.clear();*/
     </script>
+    <script>
+            //Sınıf Class Yapısı
+           /* class Araba{
+                constructor(ad,model)
+                {
+                    this.ad = ad;
+                    this.model = model;
+                }
+            }
+            let araba = new Araba("Citroen","C4");
+            console.log(araba.ad);
+            console.log(araba.model);
+
+            class ogrenci{
+                constructor(adi,soyadi)
+                {   
+                    //bu değerleri sınıfın her yerinde kullanabilmek için
+                    //this.adi şeklinde kullanıyorum
+                    this.adi = adi;
+                    this.soyadi = soyadi;
+                }
+                
+            }
+            let ogr = new ogrenci("emre","akgoz");
+            console.log(ogr.adi);
+            console.log(ogr.soyadi);
+            console.log(ogr.adi +" "+ogr.soyadi );
+
+            //Sınıf Metotları
+            class ogrenci{
+                constructor (adi,soyadi){
+                    this.ad = adi;
+                    this.soyad = soyadi;
+                }
+                ogrenciBilgisi()
+                {
+                    return "Ogrencinin adı:"+this.ad + "Ogrencinin Soyadı:" + this.soyad;
+                }
+            }
+            var ogr = new ogrenci("Emre","Akgoz");
+            console.log(ogr.ogrenciBilgisi());
+
+            class Araba{
+                constructor(marka)
+                {
+                    this.arabaAdi = marka;
+                }
+                markaBilgisi()
+                {
+                    return "Benim sahip olduğum araba: <b>" + this.arabaAdi+"</b>";
+                }
+            }
+            class Model extends Araba{
+                constructor(marka,mod){
+                    super(marka); //miras alınan sınıftaki değişkene ulaşmak için super kullanıcam
+                    this.model = mod;
+                }
+                modelBilgisi()
+                {
+                    return this.markaBilgisi() + ", arabamnın modeli <b>" + this.model+ "</b>";
+                }
+            }
+            let myCar = new Model("Toyota","C-HR");
+            document.write(myCar.modelBilgisi());
+
+            class ogrenci{
+                constructor(adi)
+                {
+                    this.ad = adi;
+                }
+                ogrenciBilgisi()
+                {
+                    return "Öğrenicinin Adı:"+this.ad;
+                }
+            }
+            class sinif extends ogrenci{
+                constructor (ad,sinif){
+                    super(ad);
+                    this.sinif = sinif;
+                }
+                tumBilgiler()
+                {
+                    return this.ogrenciBilgisi()+ ", sınıfı: " + this.sinif;
+                }
+            }
+
+            var ogr = new sinif("Emre",28);
+            document.write(ogr.tumBilgiler());
+
+            //Get ve Set Metodları
+            class Kullanıcı{
+
+                constructor(isim)
+                {
+                    this.kontrol=isim;
+                }
+                get kontrol()
+                {
+                    return this._kontrol;
+                }
+                set kontrol(value){
+                    if(value.length<4)
+                    {
+                        alert("İsim alanı çok Kısa");
+                        return;
+                    }
+                    this._kontrol = value;
+                }
+            }
+            let user = new Kullanıcı("emr");
+            console.log(user.kontrol);
+
+            class ogrenci{
+                constructor(ad)
+                {
+                    this.kontrol = ad;
+                }
+                get kontrol() //get moethodu veri çekmek için kullanılır
+                {
+                    return this._kontrol;
+                }
+                set kontrol(value){
+                    if(value.length<4)
+                    {
+                        alert("İsim cok kısa");
+                        this._kontrol = "isim kısa";
+                    }
+                    else{
+                        this._kontrol = value;
+                    }
+                    
+                }
+            }
+
+            let ogr = new ogrenci("ibo");
+            document.write(ogr.kontrol);
+
+            //Metot Ezme Override
+            //alerti geçersiz kılıcam
+            //alert yerine document write calıstı.
+            var alert = function(a){
+                document.write(a);
+            }
+            alert("emre akgoz");
+
+            //Static Metodunun Kullanımı
+            //new classAdi ifadesini kullanmadan direkt methoda erişim saglayabiliyoruz.
+            class hesap{
+                static toplam(sayi1,sayi2){
+                    return (sayi1+sayi2);
+                }
+                
+            }
+            let sonuc = hesap.toplam(10,5); //normalde new hesap demem lazımdı.
+            console.log(sonuc);*/
+
+    </script>
 </body>
 </html>
