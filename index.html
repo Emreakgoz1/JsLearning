@@ -909,7 +909,7 @@
 
         }*/
      </script>
-     <button onclick="buttonkontrol()">Tıklat bana</button>
+     <!-- <button onclick="buttonkontrol()">Tıklat bana</button>
      <button ondblclick="buttonkontrol()">Double Tıklat bana</button>
      <button oncontextmenu="buttonkontrol()">Sağ Tıklat bana</button>
      <button onmouseover="buttonkontrol()">Mouse Üzerine gelince</button>
@@ -917,8 +917,7 @@
      <p onmousedown="buttonkontrol()">Merhaba udemy eğitim setine hoşgeldiniz</p>
      <p onmousemove="buttonkontrol(event)">Merhaba udemy eğitim setine hoşgeldiniz</p>
      <div id="kor"></div>
-     <button onclick="buttonkontrol(event)">Seri Tıklat</button>
-
+     <button onclick="buttonkontrol(event)">Seri Tıklat</button>-->
      <script>
      
      
@@ -981,6 +980,144 @@
            }*/
 
         
+
+     </script>
+        <input type="text" onblur="formkontrol()">
+        <select onchange="formkontrol()">
+            <option>Emre</option>
+            <option>ENes</option>
+            <option>Ege</option>
+        </select>
+        <input type="text" onfocus="formkontrol(this)">
+        <input type="text" oninput="formkontrol(this)">
+        <form>
+            <input oninvalid="formkontrol()" type="text" required>
+            <button>Gönder</button>
+        </form>
+        <form onreset="formkontrol()">
+            <input type="text">
+            <br> <br>
+            <button>Gönder</button>
+            <button type="reset">Temizle</button>
+        </form>
+        <input type="search" onsearch="formkontrol()" >
+        <textarea onselect="formkontrol()" cols="20" rows="15">Merhaba MerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhaba</textarea>
+        <form onsubmit="return formkontrol()" >
+            <input type="text">
+            <input type="submit" value="Gönder">
+        </form>
+    <script>
+            //Form olayları
+
+
+            //Alandan Ayrıldıktan sonraki olay  (onblur)
+            //Odağı kestigimdeyi yakalıyorum
+       /*  formkontrol = () => {
+            console.log("Nesne dısına çıkıldı");
+         }
+
+         //Değişiklik Yapıldıktan Sonraki Olay (onchange)
+         formkontrol = ()=>{
+            var secim = document.querySelector("select").value;
+            //İl ilçe uygulaması yapılabilir.
+            //queryselector ile yukardaki selecte ulaşıp .value ile de içindeki değerlere ulaştım.
+            console.log(secim);
+         }
+         
+
+         //Alana odaklandıktan Sonraki olay (onfocus)
+
+         formkontrol = (e) =>
+         {
+            e.style.background = "red";
+          //  console.log("odaklandım");
+         }
+
+         //İnput alanına giriş yapılınca (oninput)
+         //İmputun içine giren değerleri yakalıyor toplu halde
+         formkontrol = (e) =>
+         {      
+            console.log(e.value);
+         }
+
+         //İnput alanına geçersiz giriş (oninvalid)
+         //Boş gönderilmesini engellemek için kullanılır
+
+         formkontrol = () =>{
+            console.log("Bu alanı doldur");
+         }
+
+         //Form alanlarını sıfırlama (onreset)
+         //Temizle butonu için
+         formkontrol = () =>{
+            console.log("Temizlendi");
+         }
+
+         //Arama Gönderileri İçin (onsearch)
+
+         formkontrol = () =>{
+            console.log("Arama Yapıldı");
+         }
+
+         //Metin Seçildiğinde (onselect) Genelde textarea makale paragraf gibi kullanılır
+         //içerisinde yazı vardır mouse ile seçtiginizde direk olarak eventi yakalayabiliriz
+         formkontrol = () =>{
+            console.log("Seçildi");
+         }
+
+
+         //Form Gönderimi Sonrası (onsubmit)
+         //Gönderme işlemleri sırasında kontrol yapma
+         //Gönderme kontrol edildikten sonra yonlendirme yaptırabilirsin
+         //Mesajımızı gosterebiliriz
+         formkontrol = () =>{
+            alert("Mesajınız gonderildi.En kısa süre dönüş sağlanacaktır");
+            return false;
+            //Return false dedigimiz için mesaji gönderme öncesinde bişeyler gosteriyorum
+            //true olursa gonderdikten sonra.
+         }*/
+
+
+     </script>
+
+     <script>
+
+                //Url İşlemleri
+
+                //Url Bilgisini Şİfreleme
+                //Değerlerin türkçe olanları tam okunamaması için kullanılır
+                var url = "İbrahim Çevrük";
+                var sifreleme = encodeURI(url);
+                console.log(sifreleme);
+
+
+                //Şifreli Url Çözümleme
+
+                var url = "%C4%B0brahim%20%C3%87evr%C3%BCk";
+                var sifrecoz = decodeURI(url);
+                console.log(sifrecoz);
+
+                //Url Bilgilerini Alma
+
+                //Sitenin adresini belirtir
+                console.log(window.location.host);
+                //Sitenin adresini belirtir
+                console.log(window.location.hostname);
+                //Protokol adresini geriye döndürür.Http mi https mi ftp mi
+                console.log(window.location.protocol);
+                //SAyfaya baglantı sırasına kullanınlan port bilgisini döndürür
+                console.log(window.location.port);
+                //Sitenin adresini belirtir
+                console.log(window.location.origin);
+                //Sayfanın url bilgisini  verir
+                console.log(window.location.href);
+                //Sayfanın url bilgisini  verir
+                console.log(window.location.url);
+                //Sayfanın domain adresi hariç path yolunu geriye döndürür.
+                console.log(window.location.pathname);
+
+
+
 
      </script>
     
