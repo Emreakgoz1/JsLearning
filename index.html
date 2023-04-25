@@ -909,9 +909,76 @@
 
         }*/
      </script>
-     <script>
+     <button onclick="buttonkontrol()">Tıklat bana</button>
+     <button ondblclick="buttonkontrol()">Double Tıklat bana</button>
+     <button oncontextmenu="buttonkontrol()">Sağ Tıklat bana</button>
+     <button onmouseover="buttonkontrol()">Mouse Üzerine gelince</button>
+     <button onmouseout="buttonkontrol()">Mouse üzerinden çekilince</button>
+     <p onmousedown="buttonkontrol()">Merhaba udemy eğitim setine hoşgeldiniz</p>
+     <p onmousemove="buttonkontrol(event)">Merhaba udemy eğitim setine hoşgeldiniz</p>
+     <div id="kor"></div>
+     <button onclick="buttonkontrol(event)">Seri Tıklat</button>
 
-            //Mouse Events
+     <script>
+     
+     
+        //Mouse Events
+        //Bir şeye tıklanmasını kontrol edebilmek için özellik olarak onclick veriyoruz ve fonksyion tanımlanıp değer alınır
+       /* buttonkontrol = ()=>{
+            console.log("Tıklatıldı");
+        }
+
+        //Mouse ile çift tıklatma (ondblclick)
+        //Windowsda dosya açma işlemleri gibi
+
+           buttonkontrol = () =>
+           {
+            console.log("Double Tıklatıldı");
+           }
+
+        //Mouse ile sağ tıklatma yakalama (oncontextmenu)
+        //Birisi sağ tıklattıgında sağ tuş kullanmak yasak diyebiliriz.
+
+        buttonkontrol = () =>
+           {
+            console.log("Sağ Tıklatıldı");
+           }
+
+        //Mouse ile üstüne gelince
+        buttonkontrol = () =>
+           {
+            console.log("üzerine gelindiı");
+           }
+        //Mouse ile Üstünden Çekince
+
+        buttonkontrol = () =>
+           {
+            console.log("üzerinden çektim");
+           }
+        
+        //Paragrafa Mouse ile üstüne tıklama
+        buttonkontrol = () =>
+           {
+            console.log("Paragrafa tıklattım");
+           }
+        
+        //Mouse Koordinatlarını Bulma
+
+        buttonkontrol = (event) =>
+           {
+                var x = event.clientX;
+                var y = event.clientY;
+
+                var k = "Kordinat: ("+x+","+y+" )";
+                document.getElementById("kor").innerText = k;
+           }
+
+           //Sürekli Tıklama Tespiti
+
+           buttonkontrol = (event) =>
+           {
+            console.log(event.detail);
+           }*/
 
         
 
