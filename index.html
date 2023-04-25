@@ -1354,5 +1354,82 @@
             console.log(sonuc);*/
 
     </script>
+    <div id="sayi">0</div>
+    <button onclick="baslat()">Başlat</button>
+    <button onclick="durdur()">Durdur</button>
+    <div id="saat">00:00:00</div>
+    <button onclick="durdur2()">Durdur2</button>
+    <script>
+
+        //Zamanlayıcılar
+        
+        //Belirlenen Süreden sonra Bir kere Calışma
+        //1000 - 1 saniye demektir.
+        //1 saniye sonra merhaba c ıktısı vermiş oldu bize
+     /*  setTimeout(function (){
+            document.write("Merhaba");
+        },1000);
+        //2.yolla yapıımı
+
+        selam = ()=>{
+            document.write("Selam");
+        }
+        setTimeout(selam,2000);
+
+        tekrarla = ()=>{
+            let sayi = document.getElementById("sayi").innerText;
+            sayi = Number(sayi) +1 ;
+            document.getElementById("sayi").innerText = sayi;
+            setTimeout(tekrarla,1000);
+        }
+        tekrarla();
+        
+
+        //Zamanlayıcıyı Durdurma (clearTimeout())
+        var sayac;
+        baslat = ()=>{
+            let sayi = document.getElementById("sayi").innerText;
+            sayi = Number(sayi) +1 ;
+            document.getElementById("sayi").innerText = sayi;
+           sayac =  setTimeout(baslat,1000);
+        }
+        durdur=()=>
+        {
+            clearTimeout(sayac);
+            document.getElementById("sayi").innerText = 0;
+        }
+
+        //Belirli Süre Aralıklarında Tekrarlanma
+        calistir = ()=>{
+            let sayi = document.getElementById("sayi").innerText;
+            sayi = Number(sayi) +1 ;
+            document.getElementById("sayi").innerText = sayi;
+        }
+        setInterval(calistir,1000);
+        
+        saat = ()=>{
+            var zaman = new Date();
+            var saat = zaman.getHours();
+            var dakika = zaman.getMinutes();
+            var saniye = zaman.getSeconds();
+            document.getElementById("saat").innerText = saat+":"+dakika+":"+saniye;
+        }
+        setInterval(saat,1000);*/
+
+        //Zamanlayıcıyı Sonlandırma
+        saat = ()=>{
+            var zaman = new Date();
+            var saat = zaman.getHours();
+            var dakika = zaman.getMinutes();
+            var saniye = zaman.getSeconds();
+            document.getElementById("saat").innerText = saat+":"+dakika+":"+saniye;
+        }
+       var dur =  setInterval(saat,1000);
+
+       durdur2 = ()=>{
+        clearInterval(dur);
+       }
+
+    </script>
 </body>
 </html>
