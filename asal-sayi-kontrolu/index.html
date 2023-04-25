@@ -1,0 +1,29 @@
+<input type="text" id="input">
+<button onclick="hesapla()">Hesapla</button>
+<div class="sonuc"></div>
+<script>
+
+    //Bir sayı sadece ve kendisine bölünüyorsa o sayı asal sayıdır.
+    hesapla = ()=>{
+        var sayac = 0;
+        //Önce inputa girilen değeri almamız gerekir.
+        var sayi = document.getElementById("input").value;
+        //input form alanı oldugu için
+        //value diyerek ben değeri almış oluyorum
+        for(var i = 2; i<sayi;i++){
+            if(sayi % i == 0)
+            {
+                sayac++;
+            }
+        }
+        if(sayac==0)
+        {
+            document.querySelector(".sonuc").innerHTML = "Asaldır.";
+        }
+        else
+        {
+            document.querySelector(".sonuc").innerHTML = "Bu sayı asal değildir.<br> Sayının" +sayac+"adet böleni var";
+
+        }
+    }
+</script>

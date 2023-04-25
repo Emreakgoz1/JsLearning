@@ -1,0 +1,28 @@
+<div id="zar1"></div>
+<div id="zar2"></div>
+<div id="sonuc"></div>
+<button onclick="zar()">Zar At</button>
+
+<script>
+    zar = ()=>{
+        var zar1 = document.getElementById("zar1");
+        var zar2 = document.getElementById("zar2");
+        var sonuc = document.getElementById("sonuc");
+
+        var at1 = Math.floor((Math.random() * 6) + 1);
+        var at2 = Math.floor((Math.random() * 6) + 1);
+
+        zar1.innerHTML = at1;
+        zar2.innerHTML = at2;
+        var zarToplami = at1 + at2;
+        if(at1==at2)
+        {
+            sonuc.innerHTML = "Zar Toplamı: " +zarToplami+"<br> Tebrikler zarlar çift geldi";
+        }
+        else{
+            
+            sonuc.innerHTML = "Zar Toplamı: " +zarToplami;
+        }
+        
+    }
+</script>

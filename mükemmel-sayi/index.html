@@ -1,0 +1,27 @@
+<input type="number" id="sayi">
+<button onclick="kontrol()">Hesapla</button>
+<div id="sonuc"></div>
+
+
+<script>
+    //Mükemmel sayi ne demek
+    //Pozitif bölenlerin toplamı kendisine eşitse
+    kontrol=()=>{
+        var sayi = document.getElementById("sayi").value;
+        var sonuc = document.getElementById("sonuc");
+        var toplam = 0;
+        for(var i = 1; i<sayi;i++){
+            if(sayi%i==0)
+            {
+                toplam += i;
+            }
+        }
+        if(sayi==toplam)
+        {
+            sonuc.innerHTML = "Bu sayi Mükemmeldir";
+        }
+        else{
+            sonuc.innerHTML = "Mükemmel Sayı değildir";
+        }
+    }
+</script>

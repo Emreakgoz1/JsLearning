@@ -1,0 +1,31 @@
+<button onclick="secim('Taş')">Taş</button>
+<button onclick="secim('Kağıt')">Kağıt</button>
+<button onclick="secim('Makas')">Makas</button>
+<div id="sonuc"></div>
+<script>
+    secim = (secim) =>{
+        var sonuc = document.getElementById("sonuc");
+        var ai = aisecim();
+        if(secim==ai){
+            sonuc.innerText = "Seçimleriniz Aynı";
+        }else if(secim=="Taş" && ai=="Kağıt"){
+            sonuc.innerText = "Kaybettin! Kağıt Taşı kapsar";
+        }else if(secim=="Taş"&& ai=="Makas"){
+            sonuc.innerText = "Kazandınız:) Taş makası kırdı";
+        }else if(secim=="Kağıt"&& ai=="Taş"){
+            sonuc.innerText = "Kazandınız:) Kağıt taşı sarar";
+        }else if(secim=="Kağıt"&& ai=="Makas"){
+            sonuc.innerText = "Kaybettin ! Makas kağıdı keser";
+        }else if(secim=="Makas"&& ai=="Kağıt"){
+            sonuc.innerText = "Kazandınız:) Makas kağıdı keser";
+        }else if(secim=="Makas"&& ai=="Taş"){
+            sonuc.innerText = "Kaybettiniz! Taş makası kırdı";
+        }
+    }
+
+    aisecim = ()=>{
+        var dizi = ["Taş","Kağıt","Makas"];
+        var sayi = Math.round(Math.random() * 2);
+        return dizi[sayi];
+    }
+</script>
