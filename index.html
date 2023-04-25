@@ -1079,14 +1079,14 @@
 
 
      </script>
-
      <script>
 
                 //Url İşlemleri
 
                 //Url Bilgisini Şİfreleme
                 //Değerlerin türkçe olanları tam okunamaması için kullanılır
-                var url = "İbrahim Çevrük";
+               
+               /* var url = "İbrahim Çevrük";
                 var sifreleme = encodeURI(url);
                 console.log(sifreleme);
 
@@ -1114,8 +1114,43 @@
                 //Sayfanın url bilgisini  verir
                 console.log(window.location.url);
                 //Sayfanın domain adresi hariç path yolunu geriye döndürür.
-                console.log(window.location.pathname);
+                console.log(window.location.pathname);*/
 
+
+     </script>
+     <script>
+                //Hata Yönetimi
+          /*  try {
+                deneme(123);
+            } catch (error) {
+                console.log(error);
+            }
+
+            //Throw 
+            //Throw ile özel hata oluşturulabilir.
+            var yas = prompt();
+            try {
+                if(yas=="")throw"Boş Bırakıldı";
+                if(isNaN(yas))throw "Sayısal Değil";
+                if(Number(yas)<18) throw "18'den küçük";
+            } catch (error) {
+                document.write(error);
+            }
+
+          */
+            //Finally 
+
+            var yas = prompt();
+            try {
+                if(yas=="")throw"Boş Bırakıldı";
+                if(isNaN(yas))throw "Sayısal Değil";
+                if(Number(yas)<18) throw "18'den küçük";
+            } catch (error) {
+                document.write(error);
+            }
+            finally{
+                console.log("Burası calıstı");
+            }
 
 
 
